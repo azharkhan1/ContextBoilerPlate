@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { GlobalStateProvider } from "./context/globalContext"
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <GlobalStateProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </GlobalStateProvider>,
+
   document.getElementById('root')
 );
 
